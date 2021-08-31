@@ -1,0 +1,4 @@
+2021-08-30 22:05:49.484 | SUCCESS  | __main__:data_transformation:31 - Transformações 1 e 2 executadas com sucesso
+2021-08-30 22:06:59.062 | SUCCESS  | __main__:data_transformation:32 - Transformações 1 e 2 executadas com sucesso
+2021-08-30 22:07:09.283 | SUCCESS  | __main__:data_transformation:45 - Transformações 3 e 4 executadas com sucesso
+2021-08-30 22:07:09.758 | SUCCESS  | __main__:pipeline:17 - Transformação realizada

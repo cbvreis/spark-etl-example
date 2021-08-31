@@ -1,0 +1,6 @@
+colorama==0.4.4
+loguru==0.5.3
+numpy==1.21.2
+py4j==0.10.9
+pyspark==3.1.2
+win32-setctime==1.0.3
