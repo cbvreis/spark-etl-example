@@ -5,6 +5,7 @@ from pyspark.ml.feature import StringIndexer, OneHotEncoder
 from pyspark.ml import Pipeline
 from loguru import logger
 
+
 def pipeline() -> None:
     '''
         Function that makes pipeline calls
@@ -13,8 +14,11 @@ def pipeline() -> None:
     logger.start("Iniciando a leitura dos dados")
     data = data_read(spark, '../data/Tweets.csv')
     data_transformed = data_transformation(spark, data)
-    data_transformed.show()
+    train,test= data_transformed.randomSplit([0.80,0.20], seed=12345)
+    train.write.parquet("../output/train.parquet", mode='overwrite')
+    test.write.parquet("../output/test.parquet", mode='overwrite')
     logger.success("Transformação realizada")
+
 
 
 def data_transformation(spark : SparkSession.Builder,data_frame: pyspark.sql.dataframe.DataFrame)->pyspark.sql.dataframe.DataFrame:
